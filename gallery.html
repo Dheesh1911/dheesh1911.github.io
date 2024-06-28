@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        #myImg2 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg2:hover {
+            opacity: 0.7;
+        }
+
+        #myImg3 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg3:hover {
+            opacity: 0.7;
+        }
+
+        #myImg4 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg4:hover {
+            opacity: 0.7;
+        }
+
+        #myImg5 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg5:hover {
+            opacity: 0.7;
+        }
+
+        #myImg6 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg6:hover {
+            opacity: 0.7;
+        }
+        
+        #myImg7 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg7:hover {
+            opacity: 0.7;
+        }
+
+        #myImg8 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg8:hover {
+            opacity: 0.7;
+        }
+
+        #myImg9 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg9:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .mainDiv{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .innerDiv{
+            margin: 65px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mainDiv">
+        <div class="innerDiv">
+            <img id="myImg" src="images/IMG1.jpg" alt="IMG1" style="width:100%;max-width:300px">
+            <img id="myImg2" src="images/IMG2.jpg" alt="IMG2" style="width:100%;max-width:300px">
+            <img id="myImg3" src="images/IMG1.jpg" alt="IMG3" style="width:100%;max-width:300px">
+        </div>
+
+
+        <div class="innerDiv">
+            <img id="myImg4" src="images/IMG4.jpg" alt="IMG4" style="width:100%;max-width:300px">
+            <img id="myImg5" src="images/IMG5.jpg" alt="IMG5" style="width:100%;max-width:300px">
+            <img id="myImg6" src="images/IMG6.jpg" alt="IMG6" style="width:100%;max-width:300px">
+        </div>
+
+        <div class="innerDiv">
+            <img id="myImg7" src="images/IMG1.jpg" alt="IMG1" style="width:100%;max-width:300px">
+            <img id="myImg8" src="images/IMG2.jpg" alt="IMG2" style="width:100%;max-width:300px">
+            <img id="myImg9" src="images/IMG1.jpg" alt="IMG3" style="width:100%;max-width:300px">
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img00">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img00");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        var img2 = document.getElementById("myImg2");
+        var modalImg2 = document.getElementById("img00");
+        img2.onclick = function () {
+                modal.style.display = "block";
+                modalImg2.src = this.src;
+        }
+
+        var img3 = document.getElementById("myImg3");
+        var modalImg3 = document.getElementById("img00");
+        img3.onclick = function () {
+            modal.style.display = "block";
+            modalImg3.src = this.src;
+        }
+
+        var img4 = document.getElementById("myImg4");
+            var modalImg4 = document.getElementById("img00");
+            img4.onclick = function () {
+                modal.style.display = "block";
+                modalImg4.src = this.src;
+            }
+
+            var img5 = document.getElementById("myImg5");
+                var modalImg5 = document.getElementById("img00");
+                img5.onclick = function () {
+                    modal.style.display = "block";
+                    modalImg5.src = this.src;
+                }
+
+        var img6 = document.getElementById("myImg6");
+            var modalImg6 = document.getElementById("img00");
+            img6.onclick = function () {
+                modal.style.display = "block";
+                modalImg6.src = this.src;
+            }    
+            
+        var img7 = document.getElementById("myImg7");
+            var modalImg7 = document.getElementById("img00");
+            img7.onclick = function () {
+                modal.style.display = "block";
+                modalImg7.src = this.src;
+            }       
+
+        var img8 = document.getElementById("myImg8");
+            var modalImg8 = document.getElementById("img00");
+            img8.onclick = function () {
+                modal.style.display = "block";
+                modalImg8.src = this.src;
+            }   
+            
+        var img9 = document.getElementById("myImg9");
+            var modalImg9 = document.getElementById("img00");
+            img9.onclick = function () {
+                modal.style.display = "block";
+                modalImg9.src = this.src;
+            }   
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
