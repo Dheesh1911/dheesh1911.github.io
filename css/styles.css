@@ -52,6 +52,13 @@
 
 }
 
+.goals2 {
+    margin: 0 1.25rem;
+    font-size: 1.125rem;
+    text-align: left;
+    padding-left: 30em;
+}
+
 .flag {
     width: 1.875rem;
     height: 1.875rem;
